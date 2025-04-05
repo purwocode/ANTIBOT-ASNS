@@ -1,0 +1,109 @@
+/* Tema Warna Hijau Tua dengan Background Hitam */
+:root {
+    --primary-color: #007c06; /* Hijau Tua */
+    --secondary-color: #05ce0f; /* Hijau Muda */
+    --accent-color: #f32e2e; /* Merah Muda */
+    --text-color: #fff; /* Teks Putih */
+    --background-color: #000; /* Background Hitam */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+  }
+  
+  /* Navbar */
+  .navbar.bg-dark-green {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color) !important;
+  }
+  
+  .navbar-brand img.logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Card */
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #1a1a1a; /* Warna card lebih gelap */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  /* Tombol */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #144a52;
+  }
+  
+  .btn-success {
+    background-color: var(--secondary-color);
+    border: none;
+  }
+  
+  .btn-success:hover {
+    background-color: #3aa8a0;
+  }
+  
+  .btn-danger {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #e65a5a;
+  }
+  
+  /* List Container */
+  .list-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #262626; /* Warna container lebih gelap */
+  }
+  
+  /* ISP Status Box */
+  .isp-status-box {
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #262626; /* Warna box lebih gelap */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .isp-status-box span {
+    font-weight: bold;
+  }
+  
+  /* Animasi */
+  .animate__animated {
+    --animate-duration: 0.5s;
+  }

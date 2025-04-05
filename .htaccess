@@ -1,0 +1,27 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Tangani view/shortcode/page
+RewriteRule ^view/([a-zA-Z0-9]+)/([0-9]+)$ view.php?shortcode=$1&page=$2 [L,QSA]
+
+# Rewrite untuk halaman view tanpa page
+RewriteRule ^view/([a-zA-Z0-9]+)$ view.php?shortcode=$1 [L,QSA]
+
+# Tangani permintaan kode pendek
+RewriteRule ^([a-zA-Z0-9]{6})$ redirect.php?code=$1 [L,QSA]
+
+# Tangani permintaan untuk slug lainnya
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?slug=$1 [L,QSA]
+
+# Halaman error kustom
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
+# php -- BEGIN cPanel-generated handler, do not edit
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
